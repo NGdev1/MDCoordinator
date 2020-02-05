@@ -8,7 +8,7 @@
 public enum TransitionType {
     case push(_ presentable: Presentable)
     case present(_ presentable: Presentable)
-    case presentOnRoot(_ presentable: Presentable)
+    case presentFullScreen(_ presentable: Presentable)
     case set(_ presentables: [Presentable])
     case none
 }

@@ -44,7 +44,7 @@ open class Router<RouteType: Route>: Presentable {
                 presentable.viewController,
                 animated: animated
             )
-        case let .presentOnRoot(presentable):
+        case let .presentFullScreen(presentable):
             presentable.viewController.modalPresentationStyle = .fullScreen
             viewController.present(
                 presentable.viewController,

@@ -36,7 +36,7 @@ open class TabBarCoordinator<RouteType: Route>: Router<RouteType> {
                 presentable.viewController,
                 animated: animated
             )
-        case let .presentOnRoot(presentable):
+        case let .presentFullScreen(presentable):
             presentable.viewController.modalPresentationStyle = .fullScreen
             viewController.present(
                 presentable.viewController,
