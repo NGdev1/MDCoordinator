@@ -49,6 +49,8 @@ open class NavigationCoordinator<RouteType: Route>: Router<RouteType> {
             )
         case .set:
             fatalError("UINavigationController set view controllers not supported.")
+        case .select:
+            fatalError("UINavigationController set view controllers not supported.")
         case .none:
             return
         }

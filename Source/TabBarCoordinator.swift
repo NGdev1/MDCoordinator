@@ -46,6 +46,8 @@ open class TabBarCoordinator<RouteType: Route>: Router<RouteType> {
             rootViewController.viewControllers = presentables.map { (presentable: Presentable) -> UIViewController in
                 presentable.viewController
             }
+        case let .select(index):
+            rootViewController.selectedIndex = index
         case .push:
             fatalError("UITabBarController can't push view controllers.")
         case .none:

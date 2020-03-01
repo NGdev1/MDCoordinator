@@ -52,6 +52,8 @@ open class Router<RouteType: Route>: Presentable {
             )
         case .set:
             fatalError("UINavigationController set view controllers not supported.")
+        case .select:
+            fatalError("UINavigationController set view controllers not supported.")
         case .none:
             return
         }

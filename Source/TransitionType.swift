@@ -10,5 +10,6 @@ public enum TransitionType {
     case present(_ presentable: Presentable)
     case presentFullScreen(_ presentable: Presentable)
     case set(_ presentables: [Presentable])
+    case select(index: Int)
     case none
 }

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "MDCoordinator"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.summary = "Координатор для IOS приложения."
 
   s.platform = :ios, "10.0"
