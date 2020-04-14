@@ -11,7 +11,7 @@ import UIKit
 open class TabBarCoordinator<RouteType: Route>: Router<RouteType> {
     // MARK: Properties
 
-    public var rootViewController: UITabBarController
+    public unowned var rootViewController: UITabBarController
 
     // MARK: Init
 
@@ -22,7 +22,7 @@ open class TabBarCoordinator<RouteType: Route>: Router<RouteType> {
         self.rootViewController = rootViewController
         super.init(viewController: rootViewController)
         if let initialRoute = initialRoute {
-            trigger(initialRoute)
+            router.trigger(initialRoute)
         }
     }
 

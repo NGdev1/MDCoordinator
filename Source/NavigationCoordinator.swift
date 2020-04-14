@@ -11,7 +11,7 @@ import UIKit
 open class NavigationCoordinator<RouteType: Route>: Router<RouteType> {
     // MARK: Properties
 
-    public var rootViewController: UINavigationController
+    public unowned var rootViewController: UINavigationController
 
     // MARK: Init
 
@@ -22,7 +22,7 @@ open class NavigationCoordinator<RouteType: Route>: Router<RouteType> {
         self.rootViewController = rootViewController
         super.init(viewController: rootViewController)
         if let initialRoute = initialRoute {
-            trigger(initialRoute)
+            router.trigger(initialRoute)
         }
     }
 
@@ -36,17 +36,24 @@ open class NavigationCoordinator<RouteType: Route>: Router<RouteType> {
                 presentable.viewController,
                 animated: animated
             )
+            let routable = presentable.viewController as? RoutableViewController<RouteType>
+            routable?.router = router
         case let .presentFullScreen(presentable):
             presentable.viewController.modalPresentationStyle = .fullScreen
             viewController.present(
                 presentable.viewController,
                 animated: animated
             )
+            let routable = presentable.viewController as? RoutableViewController<RouteType>
+            routable?.router = router
         case let .push(presentable):
             rootViewController.pushViewController(
                 presentable.viewController,
                 animated: animated
             )
+            if let routable = presentable as? RoutableViewController<RouteType> {
+                routable.router = router
+            }
         case .set:
             fatalError("UINavigationController set view controllers not supported.")
         case .select:

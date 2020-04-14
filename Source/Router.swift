@@ -11,8 +11,7 @@ import UIKit
 open class Router<RouteType: Route>: Presentable {
     // MARK: Properties
 
-    public var viewController: UIViewController
-
+    public unowned var viewController: UIViewController
     public var router: Router<RouteType> {
         return self
     }
@@ -29,6 +28,13 @@ open class Router<RouteType: Route>: Presentable {
         fatalError("Please override the \(#function) method.")
     }
 
+    public func trigger(
+        _ route: RouteType
+    ) {
+        let type = prepareTransition(for: route)
+        performTransition(of: type)
+    }
+
     public func performTransition(
         of type: TransitionType,
         animated: Bool = true
@@ -39,17 +45,23 @@ open class Router<RouteType: Route>: Presentable {
                 presentable.viewController,
                 animated: animated
             )
+            let routable = presentable.viewController as? RoutableViewController<RouteType>
+            routable?.router = router
         case let .push(presentable):
             viewController.navigationController?.pushViewController(
                 presentable.viewController,
                 animated: animated
             )
+            let routable = presentable.viewController as? RoutableViewController<RouteType>
+            routable?.router = router
         case let .presentFullScreen(presentable):
             presentable.viewController.modalPresentationStyle = .fullScreen
             viewController.present(
                 presentable.viewController,
                 animated: animated
             )
+            let routable = presentable.viewController as? RoutableViewController<RouteType>
+            routable?.router = router
         case .set:
             fatalError("UINavigationController set view controllers not supported.")
         case .select:
@@ -57,12 +69,5 @@ open class Router<RouteType: Route>: Presentable {
         case .none:
             return
         }
-    }
-
-    public func trigger(
-        _ route: RouteType
-    ) {
-        let type = prepareTransition(for: route)
-        performTransition(of: type)
     }
 }
