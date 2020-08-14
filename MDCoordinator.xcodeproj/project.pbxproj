@@ -37,6 +37,7 @@
 		6B36C99C24E5BCEE00DAE8B4 /* RoutableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
 		6B36C99D24E5BCEE00DAE8B4 /* TransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
 		6B36C99E24E5BCEE00DAE8B4 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		6B36C9D824E6A57500DAE8B4 /* MDCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = MDCoordinator.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 			children = (
 				6B36C98F24E5B2E700DAE8B4 /* Source */,
 				6B36C98E24E5B2E700DAE8B4 /* Products */,
+				6B36C9D824E6A57500DAE8B4 /* MDCoordinator.podspec */,
 			);
 			sourceTree = "<group>";
 		};
