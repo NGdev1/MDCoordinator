@@ -29,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B31675524EC08FF00E54725 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		6B36C98D24E5B2E700DAE8B4 /* libMDCoordinator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMDCoordinator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B36C99824E5BCEE00DAE8B4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		6B36C99924E5BCEE00DAE8B4 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		6B36C98424E5B2E700DAE8B4 = {
 			isa = PBXGroup;
 			children = (
+				6B31675524EC08FF00E54725 /* Readme.md */,
 				6B36C98F24E5B2E700DAE8B4 /* Source */,
 				6B36C98E24E5B2E700DAE8B4 /* Products */,
 				6B36C9D824E6A57500DAE8B4 /* MDCoordinator.podspec */,
