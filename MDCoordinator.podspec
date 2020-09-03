@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.name = "MDCoordinator"
   s.version = "1.0.0"
   s.summary = "Координатор для IOS приложения."
-  s.static_framework = true
+  # s.static_framework = true
   s.platform = :ios, "10.0"
 
   s.swift_version = '5'
