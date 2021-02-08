@@ -39,6 +39,7 @@
 		6B36C99D24E5BCEE00DAE8B4 /* TransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
 		6B36C99E24E5BCEE00DAE8B4 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		6B36C9D824E6A57500DAE8B4 /* MDCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = MDCoordinator.podspec; sourceTree = "<group>"; };
+		6B9F22A525D1DA2600193FCA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		6B36C98424E5B2E700DAE8B4 = {
 			isa = PBXGroup;
 			children = (
+				6B9F22A525D1DA2600193FCA /* Package.swift */,
 				6B31675524EC08FF00E54725 /* Readme.md */,
 				6B36C98F24E5B2E700DAE8B4 /* Source */,
 				6B36C98E24E5B2E700DAE8B4 /* Products */,
